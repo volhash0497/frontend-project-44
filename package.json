@@ -1,6 +1,7 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
+  "type": "module",
   "description": "[![Actions Status](https://github.com/volhash0497/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/volhash0497/frontend-project-44/actions)",
   "homepage": "https://github.com/volhash0497/frontend-project-44#readme",
   "bugs": {
@@ -12,9 +13,11 @@
   },
   "license": "ISC",
   "author": "",
-  "type": "commonjs",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "brain-games": "bin/brain-games.js"
   }
 }
