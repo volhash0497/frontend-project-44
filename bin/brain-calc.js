@@ -4,4 +4,4 @@ import askName from '../src/cli.js';
 import launchGame from '../src/index.js';
 
 askName();
-launchGame('brain-even');
+launchGame('brain-calc');
