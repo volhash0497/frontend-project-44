@@ -1,5 +1,3 @@
-import countAnswers from '../index.js';
-
 const isNumberEven = (num) => {
     const divider = 2;
     let correctAnswer = '';

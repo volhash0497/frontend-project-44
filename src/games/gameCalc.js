@@ -1,5 +1,3 @@
-import countAnswers from '../index.js';
-
 const chooseSign = (num) => {
     let sign = '';
     switch (num) {

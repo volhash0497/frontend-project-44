@@ -2,6 +2,7 @@ import readlineSync from 'readline-sync';
 import {userName} from './cli.js';
 import gameCalc from './games/gameCalc.js';
 import gameEven from './games/gameEven.js';
+import gameGcd from './games/gameGcd.js';
 
 const launchGame = (game) => {
     let correctAnswer = '';
@@ -16,6 +17,9 @@ const launchGame = (game) => {
             case 'brain-calc':
                 correctAnswer = gameCalc(count);
                 break;
+            case 'brain-gcd':
+                correctAnswer = gameGcd(count);
+                break;    
         }
         const userAnswer = readlineSync.question(`Your answer: `);
 
