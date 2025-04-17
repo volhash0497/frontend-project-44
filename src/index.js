@@ -3,6 +3,7 @@ import {userName} from './cli.js';
 import gameCalc from './games/gameCalc.js';
 import gameEven from './games/gameEven.js';
 import gameGcd from './games/gameGcd.js';
+import gameProgression from './games/gameProgression.js';
 
 const launchGame = (game) => {
     let correctAnswer = '';
@@ -19,7 +20,10 @@ const launchGame = (game) => {
                 break;
             case 'brain-gcd':
                 correctAnswer = gameGcd(count);
-                break;    
+                break; 
+            case 'brain-progression':
+                correctAnswer = gameProgression(count);
+                break;       
         }
         const userAnswer = readlineSync.question(`Your answer: `);
 

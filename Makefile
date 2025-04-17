@@ -13,6 +13,9 @@ brain-calc: # запустить приложение
 brain-gcd: # запустить приложение
 	node bin/brain-gcd.js
 
+brain-progression: # запустить приложение
+	node bin/brain-progression.js
+
 publish: #обновление пакетов 
 	npm publish --dry-run
 
