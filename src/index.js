@@ -4,6 +4,7 @@ import gameCalc from './games/gameCalc.js';
 import gameEven from './games/gameEven.js';
 import gameGcd from './games/gameGcd.js';
 import gameProgression from './games/gameProgression.js';
+import gamePrime from './games/gamePrime.js';
 
 const launchGame = (game) => {
     let correctAnswer = '';
@@ -23,6 +24,9 @@ const launchGame = (game) => {
                 break; 
             case 'brain-progression':
                 correctAnswer = gameProgression(count);
+                break;
+            case 'brain-prime':
+                correctAnswer = gamePrime(count);
                 break;       
         }
         const userAnswer = readlineSync.question(`Your answer: `);
