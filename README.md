@@ -1,6 +1,7 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/volhash0497/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/volhash0497/frontend-project-44/actions)
-<a href="https://codeclimate.com/github/volhash0497/frontend-project-44/maintainability"><img src="https://api.codeclimate.com/v1/badges/4873fc34114842fecb01/maintainability" /></a>
+[![Maintainability](https://api.codeclimate.com/v1/badges/4873fc34114842fecb01/maintainability)](https://codeclimate.com/github/volhash0497/frontend-project-44/maintainability)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=volhash0497_frontend-project-44&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=volhash0497_frontend-project-44)
 
 ### Requirements:
 <ul>
