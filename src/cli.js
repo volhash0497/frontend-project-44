@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-let userName = '';
+const userName = '';
 
 const askName = () => {
     console.log("Welcome to the Brain Games!");
