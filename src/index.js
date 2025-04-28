@@ -1,12 +1,13 @@
 import readlineSync from 'readline-sync';
-import {userName} from './cli.js';
 import gameCalc from './games/gameCalc.js';
 import gameEven from './games/gameEven.js';
 import gameGcd from './games/gameGcd.js';
 import gameProgression from './games/gameProgression.js';
 import gamePrime from './games/gamePrime.js';
+import askName from '../src/cli.js';
 
 const launchGame = (game) => {
+    const userName = askName();
     let correctAnswer = '';
     let count = 0;
 
@@ -27,6 +28,8 @@ const launchGame = (game) => {
                 break;
             case 'brain-prime':
                 correctAnswer = gamePrime(count);
+                break;
+            case 'brain-games':
                 break;       
         }
         const userAnswer = readlineSync.question(`Your answer: `);
