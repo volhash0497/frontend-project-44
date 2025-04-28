@@ -30,7 +30,7 @@ const launchGame = (game) => {
                 correctAnswer = gamePrime(count);
                 break;
             case 'brain-games':
-                break;       
+                return true;       
         }
         const userAnswer = readlineSync.question(`Your answer: `);
 
