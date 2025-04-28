@@ -2,4 +2,4 @@
 
 import launchGame from '../src/index.js';
 
-launchGame('');
+launchGame('brain-games');
