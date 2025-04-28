@@ -10,7 +10,7 @@ const getProgression = () => {
     const d = Math.floor(Math.random() * (maxD - minD) + minD);
     const first = Math.floor(Math.random() * (maxFirst - minFirst) + minFirst);
     array.push(first);
-    for (let i = 2; i < num; i += 1) {
+    for (let i = 2; i <= num; i += 1) {
         const el = (i - 1) * d + first;
         array.push(el);
     }
