@@ -16,9 +16,9 @@ const gameEven = (count) => {
     console.log('Answer "yes" if the number is even, otherwise answer "no".')
   }
   const max = 100
-  let num = Math.floor(Math.random() * max)
+  const num = Math.floor(Math.random() * max)
   const correctAnswer = isNumberEven(num)
-  let expression = num
+  const expression = num
   console.log(`Question: ${expression}`)
   return correctAnswer
 }

@@ -15,10 +15,10 @@ const gameGcd = (count) => {
     console.log('Find the greatest common divisor of given numbers.')
   }
   const maxNum = 100
-  let num1 = Math.floor(Math.random() * maxNum)
-  let num2 = Math.floor(Math.random() * maxNum)
+  const num1 = Math.floor(Math.random() * maxNum)
+  const num2 = Math.floor(Math.random() * maxNum)
   const correctAnswer = findGcd(num1, num2).toString()
-  let expression = `${num1} ${num2}`
+  const expression = `${num1} ${num2}`
   console.log(`Question: ${expression}`)
 
   return correctAnswer

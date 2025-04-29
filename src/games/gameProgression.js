@@ -28,7 +28,7 @@ const gameProgression = (count) => {
   const correctAnswer = array[pos].toString()
   array.splice(pos, 1, '..')
 
-  let expression = array.join(' ')
+  const expression = array.join(' ')
   console.log(`Question: ${expression}`)
 
   return correctAnswer

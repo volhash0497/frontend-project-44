@@ -41,12 +41,12 @@ const gameCalc = (count) => {
   const minNum = 20
   const maxNum = 50
   const maxSign = 3
-  let num1 = Math.floor(Math.random() * (maxNum - minNum) + minNum)
-  let num2 = Math.floor(Math.random() * minNum)
-  let signNum = Math.floor(Math.random() * maxSign)
-  let sign = chooseSign(signNum)
+  const num1 = Math.floor(Math.random() * (maxNum - minNum) + minNum)
+  const num2 = Math.floor(Math.random() * minNum)
+  const signNum = Math.floor(Math.random() * maxSign)
+  const sign = chooseSign(signNum)
   const correctAnswer = compute(num1, sign, num2).toString()
-  let expression = `${num1} ${sign} ${num2}`
+  const expression = `${num1} ${sign} ${num2}`
   console.log(`Question: ${expression}`)
 
   return correctAnswer
