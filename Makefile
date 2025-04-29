@@ -23,4 +23,4 @@ publish: #обновление пакетов
 	npm publish --dry-run
 
 lint: #lint
-	npx eslint
+	npx eslint .
