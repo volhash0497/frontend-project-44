@@ -1,14 +1,9 @@
-const getProgression = () => {
+import engine from '../index.js'
+import randomNumFromInterval from '../getRandomNumber.js'
+
+const getProgression = (first, d, num) => {
   const array = []
-  const minNum = 5
-  const maxNum = 10
-  const minD = 2
-  const maxD = 9
-  const minFirst = 5
-  const maxFirst = 15
-  const num = Math.floor(Math.random() * (maxNum - minNum) + minNum)
-  const d = Math.floor(Math.random() * (maxD - minD) + minD)
-  const first = Math.floor(Math.random() * (maxFirst - minFirst) + minFirst)
+
   array.push(first)
   for (let i = 2; i <= num; i += 1) {
     const el = (i - 1) * d + first
@@ -17,21 +12,22 @@ const getProgression = () => {
   return array
 }
 
-const gameProgression = (count) => {
-  if (count === 0) {
-    console.log('What number is missing in the progression?')
-  }
-  const array = getProgression()
-  const minPos = 0
+const question = ('What number is missing in the progression?')
+
+const getData = () => {
+  const num = randomNumFromInterval(5, 10)
+  const d = randomNumFromInterval(2, 9)
+  const firstEl = randomNumFromInterval(5, 15)
+  const array = getProgression(firstEl, d, num)
   const maxPos = array.length - 1
-  const pos = Math.floor(Math.random() * (maxPos - minPos) + minPos)
+  const pos = randomNumFromInterval(0, maxPos)
   const correctAnswer = array[pos].toString()
   array.splice(pos, 1, '..')
-
   const expression = array.join(' ')
-  console.log(`Question: ${expression}`)
 
-  return correctAnswer
+  return [expression, correctAnswer]
 }
 
-export default gameProgression
+const startGameProgression = () => engine(getData, question)
+
+export default startGameProgression

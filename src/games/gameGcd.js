@@ -1,3 +1,6 @@
+import engine from '../index.js'
+import randomNumFromInterval from '../getRandomNumber.js'
+
 const findGcd = (num1, num2) => {
   let divider = 0
   const minNum = Math.min(num1, num2)
@@ -10,18 +13,17 @@ const findGcd = (num1, num2) => {
   return divider
 }
 
-const gameGcd = (count) => {
-  if (count === 0) {
-    console.log('Find the greatest common divisor of given numbers.')
-  }
-  const maxNum = 100
-  const num1 = Math.floor(Math.random() * maxNum)
-  const num2 = Math.floor(Math.random() * maxNum)
+const question = ('Find the greatest common divisor of given numbers.')
+
+const getData = () => {
+  const num1 = randomNumFromInterval(0, 100)
+  const num2 = randomNumFromInterval(0, 100)
   const correctAnswer = findGcd(num1, num2).toString()
   const expression = `${num1} ${num2}`
-  console.log(`Question: ${expression}`)
 
-  return correctAnswer
+  return [expression, correctAnswer]
 }
 
-export default gameGcd
+const startGameGcd = () => engine(getData, question)
+
+export default startGameGcd

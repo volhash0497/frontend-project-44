@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import launchGame from '../src/index.js'
+import askName from '../src/cli.js'
 
-launchGame('brain-games')
+askName()

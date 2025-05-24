@@ -1,3 +1,6 @@
+import engine from '../index.js'
+import randomNumFromInterval from '../getRandomNumber.js'
+
 const chooseSign = (num) => {
   let sign = ''
   switch (num) {
@@ -11,6 +14,7 @@ const chooseSign = (num) => {
       sign = '*'
       break
     default:
+      sign = '+'
       break
   }
   return sign
@@ -34,22 +38,19 @@ const compute = (firstNum, sign, secondNum) => {
   return result
 }
 
-const gameCalc = (count) => {
-  if (count === 0) {
-    console.log('What is the result of the expression?')
-  }
-  const minNum = 20
-  const maxNum = 50
-  const maxSign = 3
-  const num1 = Math.floor(Math.random() * (maxNum - minNum) + minNum)
-  const num2 = Math.floor(Math.random() * minNum)
-  const signNum = Math.floor(Math.random() * maxSign)
+const question = ('What is the result of the expression?')
+
+const getData = () => {
+  const num1 = randomNumFromInterval(20, 50)
+  const num2 = randomNumFromInterval(0, 20)
+  const signNum = randomNumFromInterval(0, 3)
   const sign = chooseSign(signNum)
   const correctAnswer = compute(num1, sign, num2).toString()
   const expression = `${num1} ${sign} ${num2}`
-  console.log(`Question: ${expression}`)
 
-  return correctAnswer
+  return [expression, correctAnswer]
 }
 
-export default gameCalc
+const startGameCalc = () => engine(getData, question)
+
+export default startGameCalc

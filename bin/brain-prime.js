@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import launchGame from '../src/index.js'
+import startGamePrime from '../src/games/gamePrime.js'
 
-launchGame('brain-prime')
+startGamePrime()

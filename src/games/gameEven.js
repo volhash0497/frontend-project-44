@@ -1,26 +1,17 @@
-const isNumberEven = (num) => {
-  const divider = 2
-  let correctAnswer = ''
-  if (Number.isInteger(num) && num % divider === 0) {
-    correctAnswer = 'yes'
-  }
-  else {
-    correctAnswer = 'no'
-  }
+import engine from '../index.js'
+import randomNumFromInterval from '../getRandomNumber.js'
 
-  return correctAnswer
+const isNumberEven = num => num % 2 === 0 ? 'yes' : 'no'
+
+const question = ('Answer "yes" if the number is even, otherwise answer "no".')
+
+const getData = () => {
+  const expression = randomNumFromInterval(0, 100)
+  const correctAnswer = isNumberEven(expression)
+
+  return [expression, correctAnswer]
 }
 
-const gameEven = (count) => {
-  if (count === 0) {
-    console.log('Answer "yes" if the number is even, otherwise answer "no".')
-  }
-  const max = 100
-  const num = Math.floor(Math.random() * max)
-  const correctAnswer = isNumberEven(num)
-  const expression = num
-  console.log(`Question: ${expression}`)
-  return correctAnswer
-}
+const startGameEven = () => engine(getData, question)
 
-export default gameEven
+export default startGameEven

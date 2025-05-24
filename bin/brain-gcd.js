@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import launchGame from '../src/index.js'
+import startGameGcd from '../src/games/gameGcd.js'
 
-launchGame('brain-gcd')
+startGameGcd()

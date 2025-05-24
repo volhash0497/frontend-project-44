@@ -1,3 +1,6 @@
+import engine from '../index.js'
+import randomNumFromInterval from '../getRandomNumber.js'
+
 const checkPrimeOrNot = (num) => {
   let prime = 'yes'
   for (let i = 2; i < num; i += 1) {
@@ -8,18 +11,15 @@ const checkPrimeOrNot = (num) => {
   return prime
 }
 
-const gamePrime = (count) => {
-  if (count === 0) {
-    console.log('Answer "yes" if given number is prime. Otherwise answer "no".')
-  }
-  const minNum = 2
-  const maxNum = 50
-  const num = Math.floor(Math.random() * (maxNum - minNum) + minNum)
-  const expression = num
-  console.log(`Question: ${expression}`)
-  const correctAnswer = checkPrimeOrNot(num).toString()
+const question = ('Answer "yes" if given number is prime. Otherwise answer "no".')
 
-  return correctAnswer
+const getData = () => {
+  const expression = randomNumFromInterval(2, 50)
+  const correctAnswer = checkPrimeOrNot(expression).toString()
+
+  return [expression, correctAnswer]
 }
 
-export default gamePrime
+const startGamePrime = () => engine(getData, question)
+
+export default startGamePrime
