@@ -1,7 +1,7 @@
 import engine from '../index.js'
 import randomNumFromInterval from '../getRandomNumber.js'
 
-const isNumberEven = num % 2 === 0 ? true : false
+const isNumberEven = (num) => num % 2 === 0;
 
 const question = ('Answer "yes" if the number is even, otherwise answer "no".')
 
